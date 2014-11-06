@@ -1,0 +1,11 @@
+<% if notice %>
+  <%= notice %>
+<% end %>
+<div>
+  title:<%= @blog.title %>
+</div>
+<div>
+  body:<%= @blog.body %>
+</div>
+<%= link_to 'Edit', edit_blog_path(@blog) %>
+<%= link_to 'Back', blogs_path %>

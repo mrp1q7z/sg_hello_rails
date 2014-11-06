@@ -1,0 +1,17 @@
+<h1>Listing blogs</h1>
+<% if notice %>
+  <%= notice %>
+<% end %>
+<% @blogs.each do |blog| %>
+  <div>
+    <%= blog.title %>
+    <%= blog.body %>
+    <%= link_to 'Show', blog %>
+    <%= link_to 'Edit', edit_blog_path(blog) %>
+    <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'よろしいですか？' } %>
+  </div>
+<% end %>
+<div>
+<%= link_to 'New Blog', new_blog_path %>
+</div>
+
